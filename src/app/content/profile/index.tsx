@@ -1,0 +1,8 @@
+import * as React from 'react';
+import { Text } from 'react-native';
+
+export const Profile = () => {
+    return (
+        <Text>Profile</Text>
+    );
+};
