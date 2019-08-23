@@ -4,18 +4,21 @@ import { View } from 'react-native';
 
 import { styles } from './style';
 import { BaseField } from '../../shared/components/baseField';
+import { Button } from '../../shared/components/button';
+import { IStateProps } from './model';
 
 
 
-export const Dumb = () => {
+export const Dumb = (props: IStateProps) => {
+    const {onLoginPressed } = props;
     return (
         <View style={{flex: 1, alignItems: 'center'}}>
             <View style={{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
                 <View style={styles.content}>
                     <Field
                         component={BaseField}
-                        name='username'
-                        placeholder='username'
+                        name='email'
+                        placeholder='email'
                         type='text'
                         onCustomBlur={(event: any, formName: string, fieldName: string, newValue?: any) =>
                             console.log(`onCustomBlur form ${formName} field ${fieldName} = `, newValue)}
@@ -28,6 +31,7 @@ export const Dumb = () => {
                         onCustomBlur={(event: any, formName: string, fieldName: string, newValue?: any) =>
                             console.log(`onCustomBlur form ${formName} field ${fieldName} = `, newValue)}
                     />
+                    <Button text='login' onClick={onLoginPressed}></Button>
                 </View>
             </View>
         </View>

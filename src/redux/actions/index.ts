@@ -9,6 +9,11 @@ export enum ActionType {
 
     LOGIN = '@@rn/LOGIN',
     LOGOUT = '@@rn/LOGOUT',
+
+    CALLWRAPPER_BLOCKING_CALL_INCREMENT = '@@callwrapper/BLOCKING_CALL_INCREMENT',
+    CALLWRAPPER_BLOCKING_CALL_DECREMENT = '@@callwrapper/BLOCKING_CALL_DECREMENT',
+    CALLWRAPPER_NOTIFICATIONS_NEW = '@@callwrapper/NOTIFICATIONS_NEW',
+    CALLWRAPPER_NOTIFICATIONS_CLEAR = '@@callwrapper/NOTIFICATIONS_CLEAR',
 }
 
 export class BaseAction<T = any> {
