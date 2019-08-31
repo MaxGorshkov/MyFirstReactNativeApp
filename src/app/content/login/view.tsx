@@ -10,7 +10,7 @@ import { IStateProps } from './model';
 
 
 export const Dumb = (props: IStateProps) => {
-    const {onLoginPressed } = props;
+    const { onLoginPressed, onLogoutPressed } = props;
     return (
         <View style={{flex: 1, alignItems: 'center'}}>
             <View style={{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
@@ -32,6 +32,7 @@ export const Dumb = (props: IStateProps) => {
                             console.log(`onCustomBlur form ${formName} field ${fieldName} = `, newValue)}
                     />
                     <Button text='login' onClick={onLoginPressed}></Button>
+                    <Button text='logout' onClick={onLogoutPressed}></Button>
                 </View>
             </View>
         </View>

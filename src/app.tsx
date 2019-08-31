@@ -8,6 +8,10 @@ import { MainMenu } from './app/shared/components/mainMenu';
 import { styles } from './style';
 import { Content } from './app/routing';
 
+// tslint:disable-next-line
+let global: any;
+global.XMLHttpRequest = global.originalXMLHttpRequest || global.XMLHttpRequest;
+
 export const store = configureStore();
 
 export const App = () => {

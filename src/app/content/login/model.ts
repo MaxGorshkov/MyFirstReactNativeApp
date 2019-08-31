@@ -11,6 +11,7 @@ export interface IModel {
 
 export interface IActions {
     onLoginPressed: () => Promise<void>;
+    onLogoutPressed: () => Promise<void>;
 }
 
 export interface IStateProps extends IModel, IActions {

@@ -7,7 +7,7 @@ import { FormModel, IModel, IStateProps } from './model';
 import { validationPipe } from '../../shared/pipes';
 import { StorageState } from '../../../redux/reducers';
 import { Forms, Routes } from '../../shared/constants';
-import { login } from '../../../redux/actions/credentials';
+import { login, logout } from '../../../redux/actions/credentials';
 import { store } from '../../../app';
 import { push } from 'connected-react-router';
 
@@ -50,7 +50,10 @@ export const Login = () => {
         }
 
         await dispatch(login(stateModel.formModel));
-      }
+      },
+      onLogoutPressed: async () => {
+        await dispatch(logout(false));
+      },
   };
 
   useEffect(() => {
