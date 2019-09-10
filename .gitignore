@@ -43,7 +43,7 @@ yarn-error.log
 # BUCK
 buck-out/
 \.buckd/
-*.keystore
+!debug.keystore
 
 # fastlane
 #
@@ -61,3 +61,4 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+/ios/Podfile.lock
